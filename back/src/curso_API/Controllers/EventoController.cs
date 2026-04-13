@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+/*using System.Threading.Tasks;*/
+using curso_API.Data;
 using curso_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,42 +13,23 @@ namespace curso_API.Controllers
     [Route("api/[controller]")]
     public class EventoController : ControllerBase
     {
-        public IEnumerable<Evento> _evento = new Evento[] {
-            new Evento() {
-              EventoId = 1,
-              Local = "São Paulo",
-                DataEvento = DateTime.Now.AddMonths(2).ToString("dd/MM/yyyy")   ,
-                Tema = "Festa da Música",
-                QtdPessoas = 100,
-                Lote = "1º Lote",
-                ImagemURL = "https://example.com/imagem.jpg"  
-                },
-                
-                new Evento() {
-              EventoId = 2,
-              Local = "Rio de Janeiro",
-                DataEvento = DateTime.Now.AddMonths(3).ToString("dd/MM/yyyy")   ,
-                Tema = "Festa do Cinema",
-                QtdPessoas = 200,
-                Lote = "1º Lote",
-                ImagemURL = "https://example.com/imagem.jpg"  
-                }
-        };
-        public EventoController()
+        private readonly DataContext _context;
+
+        public EventoController(DataContext context)
         {
-           
+            _context = context;
         }
 
         [HttpGet]
         public IEnumerable<Evento> Get()
         {
-            return _evento;
+            return _context.Eventos;
         }
 
         [HttpGet("{id}")]
         public IEnumerable<Evento> GetById(int id)
         {
-            return _evento.Where(evento => evento.EventoId == id);
+            return _context.Eventos.Where(evento => evento.EventoId == id);
         }
 
         [HttpPost]
