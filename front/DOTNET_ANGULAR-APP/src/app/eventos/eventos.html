@@ -1,0 +1,12 @@
+<h1>Eventos do Component</h1>
+
+@for (evento of eventos; track evento.Id) {
+  <div>
+    <p><b>Tema:</b> {{ evento.tema }}</p>
+    <p><b>Local:</b> {{ evento.local }}</p>
+    <hr>
+  </div>
+}
+ @empty {
+  <p>Não existem eventos para exibir</p>
+} 

@@ -32,6 +32,8 @@ namespace curso_API
                 context => context.UseSqlite(Configuration.GetConnectionString("Default")
             ));
             services.AddControllers();
+            IServiceCollection serviceCollection1 = services.AddCors();
+            IServiceCollection serviceCollection = serviceCollection1;
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "curso_API", Version = "v1" });
@@ -53,6 +55,7 @@ namespace curso_API
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {
