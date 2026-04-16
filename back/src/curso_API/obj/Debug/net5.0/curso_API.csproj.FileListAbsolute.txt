@@ -55,12 +55,3 @@ D:\PROJETOS\dotnet_Angular\back\src\curso_api\bin\Debug\net5.0\runtimes\win-arm\
 D:\PROJETOS\dotnet_Angular\back\src\curso_api\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_api\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_api\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\curso_API.StaticWebAssets.xml
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.csproj.AssemblyReference.cache
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\curso_API.StaticWebAssets.Pack.cache
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\msbuild.curso_API.Microsoft.AspNetCore.StaticWebAssets.props
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\msbuild.build.curso_API.props
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.curso_API.props
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.curso_API.props
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.csproj.Up2Date
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\refint\curso_API.dll
