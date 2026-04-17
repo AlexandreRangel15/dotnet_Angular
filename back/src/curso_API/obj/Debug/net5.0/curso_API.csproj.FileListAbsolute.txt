@@ -1,4 +1,3 @@
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.csprojAssemblyReference.cache
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.GeneratedMSBuildEditorConfig.editorconfig
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.AssemblyInfoInputs.cache
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.AssemblyInfo.cs
@@ -12,17 +11,14 @@ D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\curso_API.deps.js
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\curso_API.runtimeconfig.json
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\curso_API.runtimeconfig.dev.json
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\curso_API.dll
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\ref\curso_API.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\curso_API.pdb
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\Microsoft.OpenApi.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\curso_API.StaticWebAssets.Manifest.cache
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\curso_API.StaticWebAssets.xml
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\scopedcss\bundle\curso_API.styles.css
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.RazorTargetAssemblyInfo.cache
-D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.csproj.CopyComplete
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\ref\curso_API.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.pdb
@@ -55,3 +51,12 @@ D:\PROJETOS\dotnet_Angular\back\src\curso_api\bin\Debug\net5.0\runtimes\win-arm\
 D:\PROJETOS\dotnet_Angular\back\src\curso_api\bin\Debug\net5.0\runtimes\win-arm64\native\e_sqlite3.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_api\bin\Debug\net5.0\runtimes\win-x64\native\e_sqlite3.dll
 D:\PROJETOS\dotnet_Angular\back\src\curso_api\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\bin\Debug\net5.0\curso_API.StaticWebAssets.xml
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.csproj.AssemblyReference.cache
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\curso_API.StaticWebAssets.Pack.cache
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\msbuild.curso_API.Microsoft.AspNetCore.StaticWebAssets.props
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\msbuild.build.curso_API.props
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.curso_API.props
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.curso_API.props
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\curso_API.csproj.Up2Date
+D:\PROJETOS\dotnet_Angular\back\src\curso_API\obj\Debug\net5.0\refint\curso_API.dll
