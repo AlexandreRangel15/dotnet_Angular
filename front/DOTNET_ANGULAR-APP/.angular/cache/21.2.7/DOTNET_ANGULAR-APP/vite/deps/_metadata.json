@@ -1,43 +1,64 @@
 {
-  "hash": "ed9c97c4",
-  "configHash": "736c2617",
-  "lockfileHash": "87cbef61",
-  "browserHash": "2468d9b9",
+  "hash": "c515dc23",
+  "configHash": "e5b067a7",
+  "lockfileHash": "1cb33d5b",
+  "browserHash": "0f3455e9",
   "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "db976f4c",
+      "needsInterop": false
+    },
     "@angular/common/http": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
-      "fileHash": "514ae3b2",
+      "fileHash": "3f093d9e",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "42825b5e",
+      "fileHash": "637a8834",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "9d299f44",
+      "fileHash": "ef7b59ce",
+      "needsInterop": false
+    },
+    "@angular/platform-browser/animations": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
+      "file": "@angular_platform-browser_animations.js",
+      "fileHash": "ee715c9c",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "4e4e78f5",
+      "fileHash": "73352280",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-Q3QJCLO4": {
-      "file": "chunk-Q3QJCLO4.js"
+    "chunk-T6ZRDV7N": {
+      "file": "chunk-T6ZRDV7N.js"
     },
-    "chunk-WKOWQZKO": {
-      "file": "chunk-WKOWQZKO.js"
+    "chunk-O7QQOWNG": {
+      "file": "chunk-O7QQOWNG.js"
     },
-    "chunk-BDPTHPGI": {
-      "file": "chunk-BDPTHPGI.js"
+    "chunk-GOHUROMB": {
+      "file": "chunk-GOHUROMB.js"
+    },
+    "chunk-FGFHYUJU": {
+      "file": "chunk-FGFHYUJU.js"
+    },
+    "chunk-CVDKCULB": {
+      "file": "chunk-CVDKCULB.js"
+    },
+    "chunk-CGXPGPGT": {
+      "file": "chunk-CGXPGPGT.js"
     }
   }
 }

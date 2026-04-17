@@ -1,5 +1,8 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
+  Title
+} from "./chunk-XBNYDVHV.js";
+import {
   HashLocationStrategy,
   Location,
   LocationStrategy,
@@ -7,13 +10,12 @@ import {
   PRECOMMIT_HANDLER_SUPPORTED,
   PathLocationStrategy,
   PlatformNavigation,
-  Title,
   ViewportScroller
-} from "./chunk-ECIJSA4T.js";
+} from "./chunk-VGP4EVCU.js";
 import {
   LOCATION_INITIALIZED,
   PlatformLocation
-} from "./chunk-ZRUZSTXB.js";
+} from "./chunk-ELL6CV6V.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   ApplicationRef,
@@ -92,7 +94,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-PBOS4GDB.js";
+} from "./chunk-IBC4FN27.js";
 import {
   __spreadProps,
   __spreadValues,
@@ -528,7 +530,8 @@ var UrlParser = class {
     this.remaining = url;
   }
   parseRootSegment() {
-    this.consumeOptional("/");
+    while (this.consumeOptional("/")) {
+    }
     if (this.remaining === "" || this.peekStartsWith("?") || this.peekStartsWith("#")) {
       return new UrlSegmentGroup([], {});
     }
@@ -5943,7 +5946,7 @@ function mapToCanDeactivate(providers) {
 function mapToResolve(provider) {
   return (...params) => inject(provider).resolve(...params);
 }
-var VERSION = new Version("21.2.8");
+var VERSION = new Version("21.2.9");
 
 export {
   PRIMARY_OUTLET,
@@ -6028,4 +6031,4 @@ export {
   mapToResolve,
   VERSION
 };
-//# sourceMappingURL=chunk-AFGKOBZ5.js.map
+//# sourceMappingURL=chunk-QB6R7JON.js.map

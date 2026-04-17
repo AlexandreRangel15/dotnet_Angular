@@ -1,4 +1,9 @@
 import {
+  Title
+} from "./chunk-T6ZRDV7N.js";
+import "./chunk-O7QQOWNG.js";
+import "./chunk-GOHUROMB.js";
+import {
   HashLocationStrategy,
   Location,
   LocationStrategy,
@@ -6,13 +11,12 @@ import {
   PRECOMMIT_HANDLER_SUPPORTED,
   PathLocationStrategy,
   PlatformNavigation,
-  Title,
   ViewportScroller
-} from "./chunk-Q3QJCLO4.js";
+} from "./chunk-FGFHYUJU.js";
 import {
   LOCATION_INITIALIZED,
   PlatformLocation
-} from "./chunk-WKOWQZKO.js";
+} from "./chunk-CVDKCULB.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   ApplicationRef,
@@ -119,7 +123,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-BDPTHPGI.js";
+} from "./chunk-CGXPGPGT.js";
 
 // node_modules/@angular/router/fesm2022/_router-chunk.mjs
 var PRIMARY_OUTLET = "primary";
@@ -548,7 +552,8 @@ var UrlParser = class {
     this.remaining = url;
   }
   parseRootSegment() {
-    this.consumeOptional("/");
+    while (this.consumeOptional("/")) {
+    }
     if (this.remaining === "" || this.peekStartsWith("?") || this.peekStartsWith("#")) {
       return new UrlSegmentGroup([], {});
     }
@@ -5959,7 +5964,7 @@ function mapToCanDeactivate(providers) {
 function mapToResolve(provider) {
   return (...params) => inject(provider).resolve(...params);
 }
-var VERSION = new Version("21.2.8");
+var VERSION = new Version("21.2.9");
 export {
   ActivatedRoute,
   ActivatedRouteSnapshot,
