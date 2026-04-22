@@ -146,7 +146,6 @@ export {
   setRootDomAdapter,
   DomAdapter,
   PlatformLocation,
-  LOCATION_INITIALIZED,
-  BrowserPlatformLocation
+  LOCATION_INITIALIZED
 };
-//# sourceMappingURL=chunk-ELL6CV6V.js.map
+//# sourceMappingURL=chunk-WCMTEQDJ.js.map

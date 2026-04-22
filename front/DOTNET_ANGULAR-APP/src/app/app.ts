@@ -3,13 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { Palestrantes } from './palestrantes/palestrantes';
 import { EventosComponent } from "./eventos/eventos";
 import { HttpClient } from '@angular/common/http'; // Mantenha apenas o HttpClient
+import { Nav } from './nav/nav';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   // ❌ Remova o HttpClientModule daqui
-  imports: [RouterOutlet, Palestrantes, EventosComponent], 
+  imports: [RouterOutlet, Palestrantes, EventosComponent, Nav], 
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

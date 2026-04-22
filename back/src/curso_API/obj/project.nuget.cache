@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a4EhoTfq8cc=",
+  "dgSpecHash": "SKSCVldOwoo6LhH6p8dkqT8bCNOpr9H33SSKx0NpbRGpVmc2DQsBI1s10vnFdB8o2gg3YKF3X6vucqwvtwPYxw==",
   "success": true,
-  "projectFilePath": "D:\\PROJETOS\\dotnet_Angular\\back\\src\\curso_API\\curso_API.csproj",
+  "projectFilePath": "C:\\Projeto\\dotnet_Angular\\back\\src\\curso_API\\curso_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexandre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Alexandre\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
