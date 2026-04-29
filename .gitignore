@@ -481,3 +481,10 @@ appsettings.Development.json
 .vscode/
 *.swp
 *.DS_Store
+[Bb]in/
+[Oo]bj/
+.vs/
+.angular/
+node_modules/
+*.user
+*.suo
