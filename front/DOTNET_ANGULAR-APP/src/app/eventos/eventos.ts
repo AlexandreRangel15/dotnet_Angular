@@ -11,6 +11,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // Importe
 export class EventosComponent implements OnInit {
   
   public eventos: any = []; // Inicialize como array vazio para evitar erros no template
+  mostrarImagem: boolean = true;
 
   // Injete o ChangeDetectorRef no construtor
   constructor(

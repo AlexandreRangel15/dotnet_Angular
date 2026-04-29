@@ -16,7 +16,11 @@
       <th>Data</th>
       <th>Capacidade</th>
       <th>Lote</th>
-      <th>Imagem</th>
+      <th>
+      <button type="button" class="btn btn-light btn-outline btn-sm" (click)="mostrarImagem = !mostrarImagem">
+        Imagens
+      </button>
+      </th>
       <th>Opções</th>
     </tr>
   </thead>
@@ -29,8 +33,13 @@
       <td>{{evento.dataEvento }}</td>
       <td>{{evento.qtdPessoas}}</td>
       <td>{{evento.lote}}</td>
-      <td>
-        <img src="{{evento.imagemURL}}" alt="{{evento.tema}}" width="50">
+      <td> 
+        <img 
+          [src]="'assets/images/' + evento.imagemURL"
+          alt="{{evento.tema}}"
+          width="60"
+          margin = "2px"
+        }>
       </td>
       <td>
         <button class="btn btn-primary btn-sm me-2">Editar</button>
@@ -40,7 +49,7 @@
   }
 }
 </tbody>
-<tfoot>@if (!eventos && eventos.length) {
+<tfoot> @if (!eventos && eventos.length) {
   <tr>
     <td colspan="8" class="text-center">
       <h4>Nenhum evento encontrado.</h4>
