@@ -8,7 +8,7 @@
   </div>
 </form>
 <table class="table table-striped">
-  <thead class="thead-dark">
+  <thead class="table-dark">
     <tr>
       <th>#</th>
       <th>Tema</th>
@@ -20,18 +20,31 @@
       <th>Opções</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody> @if (eventos && eventos.length) {
+  @for (evento of eventos; track evento.id) {
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>{{evento.eventoId}}</td>
+      <td>{{evento.tema}}</td>
+      <td>{{evento.local}}</td>
+      <td>{{evento.dataEvento }}</td>
+      <td>{{evento.qtdPessoas}}</td>
+      <td>{{evento.lote}}</td>
+      <td>
+        <img src="{{evento.imagemURL}}" alt="{{evento.tema}}" width="50">
+      </td>
+      <td>
+        <button class="btn btn-primary btn-sm me-2">Editar</button>
+        <button class="btn btn-danger btn-sm">Excluir</button>
+      </td>
     </tr>
-  </tbody>
-</table>
-
-
+  }
+}
+</tbody>
+<tfoot>@if (!eventos && eventos.length) {
+  <tr>
+    <td colspan="8" class="text-center">
+      <h4>Nenhum evento encontrado.</h4>
+    </td>
+  </tr>
+}
+</tfoot>
