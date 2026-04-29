@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projeto\\dotnet_Angular\\back\\src\\curso_API\\curso_API.csproj": {}
+    "C:\\Users\\e.alexandre.junior\\source\\repos\\back\\src\\curso_API\\curso_API.csproj": {}
   },
   "projects": {
-    "C:\\Projeto\\dotnet_Angular\\back\\src\\curso_API\\curso_API.csproj": {
+    "C:\\Users\\e.alexandre.junior\\source\\repos\\back\\src\\curso_API\\curso_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projeto\\dotnet_Angular\\back\\src\\curso_API\\curso_API.csproj",
+        "projectUniqueName": "C:\\Users\\e.alexandre.junior\\source\\repos\\back\\src\\curso_API\\curso_API.csproj",
         "projectName": "curso_API",
-        "projectPath": "C:\\Projeto\\dotnet_Angular\\back\\src\\curso_API\\curso_API.csproj",
-        "packagesPath": "C:\\Users\\Alexandre\\.nuget\\packages\\",
-        "outputPath": "C:\\Projeto\\dotnet_Angular\\back\\src\\curso_API\\obj\\",
+        "projectPath": "C:\\Users\\e.alexandre.junior\\source\\repos\\back\\src\\curso_API\\curso_API.csproj",
+        "packagesPath": "C:\\Users\\e.alexandre.junior\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\e.alexandre.junior\\source\\repos\\back\\src\\curso_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Alexandre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\e.alexandre.junior\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,7 +39,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net5.0": {
@@ -72,7 +78,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -84,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
