@@ -455,3 +455,29 @@ FodyWeavers.xsd
 *.nuget.g.props
 *.nuget.g.targets
 project.assets.json
+# --- .NET / C# ---
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --- Angular / Node ---
+node_modules/
+dist/
+.angular/
+npm-debug.log*
+yarn-error.log*
+
+# --- Databases & Secrets ---
+*.db
+*.sqlite
+appsettings.Development.json
+.env
+
+# --- IDEs ---
+.vs/
+.vscode/
+*.swp
+*.DS_Store
