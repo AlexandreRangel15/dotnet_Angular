@@ -17,7 +17,7 @@
       <th>Capacidade</th>
       <th>Lote</th>
       <th>
-      <button type="button" class="btn btn-light btn-outline btn-sm" (click)="mostrarImagem = !mostrarImagem">
+      <button type="button" class="btn btn-light btn-outline btn-sm" (click)="alterarImagem()">
         Imagens
       </button>
       </th>
@@ -34,12 +34,13 @@
       <td>{{evento.qtdPessoas}}</td>
       <td>{{evento.lote}}</td>
       <td> 
+        @if (mostrarImagem) {
         <img 
           [src]="'assets/images/' + evento.imagemURL"
           alt="{{evento.tema}}"
           width="60"
           margin = "2px"
-        }>
+        >}
       </td>
       <td>
         <button class="btn btn-primary btn-sm me-2">Editar</button>

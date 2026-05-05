@@ -23,6 +23,10 @@ export class EventosComponent implements OnInit {
     this.getEventos();
   }
 
+  alterarImagem() {
+    this.mostrarImagem = !this.mostrarImagem;
+  }
+
   public getEventos(): void {
     this.http.get('https://localhost:5001/api/evento').subscribe({
       next: (response) => {
