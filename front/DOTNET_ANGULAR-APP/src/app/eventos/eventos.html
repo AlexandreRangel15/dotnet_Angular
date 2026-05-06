@@ -1,15 +1,15 @@
 <h2>Eventos</h2>
 <hr>
 
-<div class="form inline">
+<div class="form-inline">
   <div class="form-group mb-2">
-    <input type="text" class="form-control mr-2"placeholder="buscar"
+    <label class="mr-2">Filtrar: </label>
+    <input type="text" class="form-control mr-2"placeholder="Buscar"
     name="filtroLista"
     [(ngModel)]="filtroLista">
-    <button class="btn btn-outline-success">Buscar</button>
   </div>
 </div>
-<h3>Filtro: {{filtroLista}}</h3>
+ <!-- <h3> {{filtroLista}}</h3>-->
 <table class="table table-striped">
   <thead class="table-dark">
     <tr class="text-center">
@@ -43,7 +43,7 @@
           [isAnimated]="true"
           [src]="'assets/images/' + evento.imagemURL"
           alt="{{evento.tema}}"
-          width="100px"
+          width="150px"
           margin = "2px"
         >}
       </td>
