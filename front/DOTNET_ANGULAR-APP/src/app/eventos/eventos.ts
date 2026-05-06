@@ -1,8 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // Importe o ChangeDetectorRef
 import { CommonModule } from '@angular/common';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
+import { EventoService } from '../services/evento.service';
 
 @Component({
   selector: 'app-eventos',
@@ -38,7 +38,7 @@ filtrarEventos(filtrarPor: string): any {
 }
   // Injete o ChangeDetectorRef no construtor
   constructor(
-    private http: HttpClient,
+    private eventoService: EventoService,
     private cdr: ChangeDetectorRef 
   ) { }
 
@@ -51,7 +51,7 @@ filtrarEventos(filtrarPor: string): any {
   }
 
   public getEventos(): void {
-    this.http.get('https://localhost:5001/api/evento').subscribe({
+    this.eventoService.getEvento().subscribe({
       next: (response) => {
         this.eventos = response; 
         this.eventosFiltrados = this.eventos;
