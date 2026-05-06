@@ -6,11 +6,16 @@ import { HttpClient } from '@angular/common/http'; // Mantenha apenas o HttpClie
 import { Nav } from './nav/nav';
 
 
+
+import { FormsModule } from '@angular/forms';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
   // ❌ Remova o HttpClientModule daqui
-  imports: [RouterOutlet, Palestrantes, EventosComponent, Nav], 
+  imports: [RouterOutlet, Palestrantes, EventosComponent, Nav, FormsModule, CollapseModule], 
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

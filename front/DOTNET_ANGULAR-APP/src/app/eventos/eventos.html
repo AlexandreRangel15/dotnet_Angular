@@ -1,15 +1,18 @@
 <h2>Eventos</h2>
 <hr>
 
-<form action="" class="form inline">
+<div class="form inline">
   <div class="form-group mb-2">
-    <input type="text" class="form-control mr-2" placeholder="buscar">
+    <input type="text" class="form-control mr-2"placeholder="buscar"
+    name="filtroLista"
+    [(ngModel)]="filtroLista">
     <button class="btn btn-outline-success">Buscar</button>
   </div>
-</form>
+</div>
+<h3>Filtro: {{filtroLista}}</h3>
 <table class="table table-striped">
   <thead class="table-dark">
-    <tr>
+    <tr class="text-center">
       <th>#</th>
       <th>Tema</th>
       <th>Local</th>
@@ -17,15 +20,15 @@
       <th>Capacidade</th>
       <th>Lote</th>
       <th>
-      <button type="button" class="btn btn-light btn-outline btn-sm" (click)="alterarImagem()">
-        Imagens
+      <button type="button" class="btn btn-dark btn-outline btn-sm" (click)="alterarImagem()">
+        Mostrar Imagem
       </button>
       </th>
       <th>Opções</th>
     </tr>
   </thead>
-  <tbody> @if (eventos && eventos.length) {
-  @for (evento of eventos; track evento.id) {
+  <tbody class="text-center"> @if (eventos && eventos.length) {
+  @for (evento of eventosFiltrados; track evento.eventoId) {
     <tr>
       <td>{{evento.eventoId}}</td>
       <td>{{evento.tema}}</td>
@@ -35,10 +38,12 @@
       <td>{{evento.lote}}</td>
       <td> 
         @if (mostrarImagem) {
-        <img 
+        <img
+         [collapse]="!mostrarImagem"
+          [isAnimated]="true"
           [src]="'assets/images/' + evento.imagemURL"
           alt="{{evento.tema}}"
-          width="60"
+          width="100px"
           margin = "2px"
         >}
       </td>
@@ -50,7 +55,7 @@
   }
 }
 </tbody>
-<tfoot> @if (!eventos && eventos.length) {
+<tfoot> @if (!eventosFiltrados && eventosFiltrados.length === 0) {
   <tr>
     <td colspan="8" class="text-center">
       <h4>Nenhum evento encontrado.</h4>
