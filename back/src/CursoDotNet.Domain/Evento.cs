@@ -1,4 +1,4 @@
-namespace curso_API.Models
+namespace CursoDotNet.Application
 {
     public class Evento
     {

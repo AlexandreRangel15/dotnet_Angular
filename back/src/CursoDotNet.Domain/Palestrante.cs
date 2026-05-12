@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace curso_API.Models
+namespace CursoDotNet.Application
 {
     public class Palestrante
     {
