@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using CursoDotNet.Persistence;
 using CursoDotNet.Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using CursoDotNet.Persistence.Contextos;
 
 namespace curso_API.Controllers
 {

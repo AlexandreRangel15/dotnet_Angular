@@ -1,0 +1,45 @@
+using System.Linq;
+using System.Threading.Tasks;
+using CursoDotNet.Domain;
+using CursoDotNet.Persistence.Contextos;
+using CursoDotNet.Persistence.Contratos;
+using Microsoft.EntityFrameworkCore;
+
+namespace CursoDotNet.Persistence
+{
+    public class GeralPersistence : IGeralPersist
+    {
+        private readonly CursoDotNetContext _context;
+       
+
+        public GeralPersistence(CursoDotNetContext context)
+        {
+            _context = context;
+        }
+        public void add<T>(T entity) where T : class
+        {
+            _context.Add(entity);
+        }
+
+        public void update<T>(T entity) where T : class
+        {
+            _context.Update(entity);
+        }
+
+        public void delete<T>(T entity) where T : class
+        {
+            _context.Remove(entity);
+        }
+        
+
+        public void DeleteRange<T>(T[] entities) where T : class
+        {
+            _context.RemoveRange(entities);
+        }
+
+        public async Task<bool> SaveChangesAsync()
+        {
+            return (await _context.SaveChangesAsync()) > 0;
+        }
+    }
+}

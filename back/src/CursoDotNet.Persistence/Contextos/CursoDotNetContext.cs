@@ -1,9 +1,7 @@
 using CursoDotNet.Domain;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 
-namespace CursoDotNet.Persistence
+namespace CursoDotNet.Persistence.Contextos
 {
     public class CursoDotNetContext : DbContext
     {
