@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace CursoDotNet.Application
+
+namespace CursoDotNet.Domain
 {
     public class Lote
     {

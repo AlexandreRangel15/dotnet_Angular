@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace CursoDotNet.Application
+namespace CursoDotNet.Domain
 {
     public class Palestrante
     {

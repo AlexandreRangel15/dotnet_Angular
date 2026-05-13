@@ -1,4 +1,7 @@
-﻿namespace CursoDotNet.Application
+﻿
+
+
+namespace CursoDotNet.Domain
 {
     public class PalestranteEvento
     {

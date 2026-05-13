@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using curso_API.Data;
-using curso_API.Models;
+using CursoDotNet.Persistence;
+using CursoDotNet.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -13,9 +13,9 @@ namespace curso_API.Controllers
     [Route("api/[controller]")]
     public class EventoController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly CursoDotNetContext _context;
 
-        public EventoController(DataContext context)
+        public EventoController(CursoDotNetContext context)
         {
             _context = context;
         }
@@ -29,7 +29,7 @@ namespace curso_API.Controllers
         [HttpGet("{id}")]
         public IEnumerable<Evento> GetById(int id)
         {
-            return _context.Eventos.Where(evento => evento.EventoId == id);
+            return _context.Eventos.Where(evento => evento.Id == id);
         }
 
         [HttpPost]
