@@ -49,7 +49,7 @@ namespace CursoDotNet.Persistence
             return await query.ToArrayAsync();
         }
 
-        public async Task<Palestrante> GetPalestranteByIdAsync(int PalestranteId, bool includeEventos = false)
+        public async Task<Palestrante> GetPalestranteByIdAsync(int palestranteId, bool includeEventos = false)
         {
             IQueryable<Palestrante> query = _context.Palestrantes           
                 .Include(p => p.RedesSociais);
@@ -61,7 +61,7 @@ namespace CursoDotNet.Persistence
                 }
 
             query = query.OrderBy(p => p.Id)
-            .Where(p => p.Id == PalestranteId);
+            .Where(p => p.Id == palestranteId);
 
             return await query.FirstOrDefaultAsync();
         }

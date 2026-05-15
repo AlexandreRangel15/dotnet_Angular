@@ -1,0 +1,122 @@
+using System;
+using System.Threading.Tasks;
+using CursoDotNet.Application.Contratos;
+using CursoDotNet.Domain;
+using CursoDotNet.Persistence.Contratos;
+
+namespace CursoDotNet.Application
+{
+    public class EventoService : IEventoService
+    {
+
+        private readonly IGeralPersist _geralPersist;
+        private readonly IEventoPersist _eventoPersist;
+        public EventoService(IGeralPersist geralPersist, IEventoPersist eventoPersist)
+        {
+            _geralPersist = geralPersist;
+            _eventoPersist = eventoPersist;
+        }
+      public async Task<Evento> AddEventos(Evento model)
+        {
+            try
+            {
+                _geralPersist.Add<Evento>(model);
+                if (await _geralPersist.SaveChangesAsync())
+                {
+                    return await _eventoPersist.GetEventoByIdAsync(model.Id, false);
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<Evento> UpdateEventos(int eventoId, Evento model)
+        {
+            try
+            {
+                var evento = await _eventoPersist.GetEventoByIdAsync(eventoId, false);
+                if (evento == null) throw new Exception("Evento para update não encontrado.");
+
+                model.Id = evento.Id;
+
+                _geralPersist.Update(model);
+                if (await _geralPersist.SaveChangesAsync())
+                {
+                    return await _eventoPersist.GetEventoByIdAsync(model.Id, false);
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+    
+        public async Task<bool> DeleteEvento(int eventoId)
+        {
+            try
+            {
+                var evento = await _eventoPersist.GetEventoByIdAsync(eventoId, false);
+                if (evento == null) throw new Exception("Evento para delete não encontrado.");
+
+                _geralPersist.Delete(evento);
+                return await _geralPersist.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+       
+        
+        public async Task<Evento[]> GetAllEventosAsync(bool includePalestrantes = false)
+        {
+            try
+            {
+                var eventos = await _eventoPersist.GetAllEventosAsync(includePalestrantes);
+                if (eventos == null) throw new Exception("Eventos para get all não encontrados.");
+
+                return eventos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<Evento[]> GetAllEventosByTemaAsync(string tema, bool includePalestrantes = false)
+        {
+            try
+            {
+                var eventos = await _eventoPersist.GetAllEventosByTemaAsync(tema, includePalestrantes);
+                if (eventos == null) throw new Exception("Eventos para get by tema não encontrados.");
+
+                return eventos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+          public async Task<Evento> GetEventoByIdAsync(int eventoId, bool includePalestrantes = false)
+        {
+            try
+            {
+                var evento = await _eventoPersist.GetEventoByIdAsync(eventoId, includePalestrantes);
+                if (evento == null) throw new Exception("Evento para get by id não encontrado.");
+
+                return evento;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+    }
+}
