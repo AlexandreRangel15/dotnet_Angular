@@ -1,4 +1,10 @@
+using CursoDotNet.Application;
+using CursoDotNet.Application.Contratos;
 using CursoDotNet.Persistence.Contextos;
+using CursoDotNet.Persistence.Contratos;
+using EventoService = CursoDotNet.Application.EventoService;
+using geralPersist = CursoDotNet.Persistence.GeralPersistence;
+using eventoPersist = CursoDotNet.Persistence.EventoPersistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +31,11 @@ namespace curso_API
                 context => context.UseSqlite(Configuration.GetConnectionString("Default")
             ));
             services.AddControllers();
+
+            services.AddScoped<IEventoService, EventoService>();
+            services.AddScoped<IGeralPersist, geralPersist>();
+            services.AddScoped<IEventoPersist, eventoPersist>();
+
             IServiceCollection serviceCollection1 = services.AddCors();
             IServiceCollection serviceCollection = serviceCollection1;
             services.AddSwaggerGen(c =>
