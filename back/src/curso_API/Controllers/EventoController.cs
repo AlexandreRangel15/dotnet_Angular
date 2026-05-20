@@ -7,6 +7,7 @@ using CursoDotNet.Application.Contratos;
 using System.Threading.Tasks;
 using CursoDotNet.Persistence.Contratos;
 using System;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace curso_API.Controllers
 {
@@ -17,9 +18,10 @@ namespace curso_API.Controllers
         private readonly IEventoService _eventoService;
         private readonly IGeralPersist _geralPersist;
 
-        public EventoController(IEventoService eventoService)
+        public EventoController(IEventoService eventoService, IGeralPersist geralPersist)
         {
             _eventoService = eventoService;
+            _geralPersist = geralPersist;
         }
 
         [HttpGet]
