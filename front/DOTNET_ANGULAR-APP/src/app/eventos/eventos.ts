@@ -4,11 +4,12 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
 import { EventoService } from '../services/evento.service';
 import { Evento } from '../models/Evento';
+import { DateTimeFormatPipe } from "../helpers/DateTimeFormat.pipe";
 
 @Component({
   selector: 'app-eventos',
   standalone: true, // Se estiver usando Angular 17+
-  imports: [CommonModule, CollapseModule, FormsModule],
+  imports: [CommonModule, CollapseModule, FormsModule, DateTimeFormatPipe],
   templateUrl: './eventos.html',
   styleUrl: './eventos.scss',
 })

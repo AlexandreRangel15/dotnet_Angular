@@ -20,22 +20,24 @@
       <th>Capacidade</th>
       <th>Lote</th>
       <th>
-      <button type="button" class="btn btn-dark btn-outline btn-sm" (click)="alterarImagem()">
-        Mostrar Imagem
+      <button type="button" class="btn btn-dark btn-outline btn-sm" 
+      (click)="alterarImagem()">
+      <i class ="{{!mostrarImagem ? 'fa fa-eye' : 'fa fa-eye-slash'}}"></i>
+        {{!mostrarImagem ? 'Mostrar' : 'Ocultar'}} 
       </button>
       </th>
       <th>Opções</th>
     </tr>
   </thead>
   <tbody class="text-center"> @if (eventos && eventos.length) {
-  @for (evento of eventosFiltrados; track evento.eventoId) {
+  @for (evento of eventosFiltrados; track evento.id) {
     <tr>
-      <td>{{evento.eventoId}}</td>
+      <td>{{evento.id}}</td>
       <td>{{evento.tema}}</td>
       <td>{{evento.local}}</td>
-      <td>{{evento.dataEvento }}</td>
+      <td>{{evento.dataEvento | DateFormatPipe: 'dd/MM/yyyy' }}</td>
       <td>{{evento.qtdPessoas}}</td>
-      <td>{{evento.lote}}</td>
+      <td>{{evento.lotes[0].nome}}</td>
       <td> 
         @if (mostrarImagem) {
         <img
@@ -48,14 +50,20 @@
         >}
       </td>
       <td>
-        <button class="btn btn-primary btn-sm me-2">Editar</button>
-        <button class="btn btn-danger btn-sm">Excluir</button>
+        <button class="btn btn-primary btn-sm me-2">
+        <i class="fa fa-edit"></i>  
+          
+        </button>
+        <button class="btn btn-danger btn-sm">
+          <i class="fa fa-trash"></i>
+          
+        </button>
       </td>
     </tr>
   }
 }
 </tbody>
-<tfoot> @if (!eventosFiltrados && eventosFiltrados.length === 0) {
+<tfoot> @if (eventosFiltrados && eventosFiltrados.length === 0) {
   <tr>
     <td colspan="8" class="text-center">
       <h4>Nenhum evento encontrado.</h4>

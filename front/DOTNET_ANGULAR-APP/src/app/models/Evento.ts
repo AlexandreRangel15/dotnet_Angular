@@ -3,13 +3,14 @@ import { RedeSocial } from "./RedeSocial";
 import { Lote } from "./Lote";
 import { Palestrante } from "./Palestrante";
 
+
 export interface Evento {    
-  eventoId: number;
+  id: number;
   local: string;
   dataEvento?: Date;
   tema: string;
   qtdPessoas: number;
-  lote: string;
+  lote: number;
   imagemURL: string;
   telefone: string;
   email: string;

@@ -10,13 +10,14 @@ import { Nav } from './nav/nav';
 import { FormsModule } from '@angular/forms';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { EventoService } from './services/evento.service';
+import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   // ❌ Remova o HttpClientModule daqui
-  imports: [RouterOutlet, Palestrantes, EventosComponent, Nav, FormsModule, CollapseModule], 
+  imports: [RouterOutlet, Palestrantes, EventosComponent, Nav, FormsModule, CollapseModule, DateTimeFormatPipe], 
   templateUrl: './app.html',
   styleUrl: './app.scss',
   providers: [EventoService] // Não é necessário fornecer o HttpClient aqui, pois ele já é fornecido globalmente por provideHttpClient()
