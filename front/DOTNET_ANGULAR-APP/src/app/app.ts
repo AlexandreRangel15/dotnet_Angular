@@ -9,6 +9,7 @@ import { Nav } from './nav/nav';
 
 import { FormsModule } from '@angular/forms';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { EventoService } from './services/evento.service';
 
 
 @Component({
@@ -17,7 +18,8 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
   // ❌ Remova o HttpClientModule daqui
   imports: [RouterOutlet, Palestrantes, EventosComponent, Nav, FormsModule, CollapseModule], 
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+  providers: [EventoService] // Não é necessário fornecer o HttpClient aqui, pois ele já é fornecido globalmente por provideHttpClient()
 })
 export class App {
   // ✅ Isso vai funcionar automaticamente por causa do provideHttpClient() no app.config.ts

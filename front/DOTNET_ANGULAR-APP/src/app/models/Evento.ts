@@ -4,17 +4,17 @@ import { Lote } from "./Lote";
 import { Palestrante } from "./Palestrante";
 
 export interface Evento {    
-  EventoId: number;
-  Local: string;
-  DataEvento?: Date;
-  Tema: string;
-  QtdPessoas: number;
-  Lote: string;
-  ImagemURL: string;
-  Telefone: string;
-  Email: string;
-  Lotes: Lote[];
-  RedesSociais: RedeSocial[];
-  PalestrantesEventos: Palestrante[];
+  eventoId: number;
+  local: string;
+  dataEvento?: Date;
+  tema: string;
+  qtdPessoas: number;
+  lote: string;
+  imagemURL: string;
+  telefone: string;
+  email: string;
+  lotes: Lote[];
+  redesSociais: RedeSocial[];
+  palestrantesEventos: Palestrante[];
 }
 

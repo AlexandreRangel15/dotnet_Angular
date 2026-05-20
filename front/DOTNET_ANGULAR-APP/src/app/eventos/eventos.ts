@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
 import { EventoService } from '../services/evento.service';
+import { Evento } from '../models/Evento';
 
 @Component({
   selector: 'app-eventos',
@@ -14,8 +15,8 @@ import { EventoService } from '../services/evento.service';
 export class EventosComponent implements OnInit {
   
   
-  public eventos: any = []; // Inicialize como array vazio para evitar erros no template
-  public eventosFiltrados: any = [];
+  public eventos: Evento[] = []; // Inicialize como array vazio para evitar erros no template
+  public eventosFiltrados: Evento[] = [];
 
   public mostrarImagem: boolean = true;
   private _filtroLista: string = '';
@@ -29,7 +30,7 @@ export class EventosComponent implements OnInit {
     this.eventosFiltrados = this._filtroLista ? this.filtrarEventos(this._filtroLista) : this.eventos;
   }
 
-filtrarEventos(filtrarPor: string): any {
+  public filtrarEventos(filtrarPor: string): Evento[] {
   filtrarPor = filtrarPor.toLocaleLowerCase();
   return this.eventos.filter(
     (    evento: { tema: string; local: string; }) => evento.tema.toLocaleLowerCase().indexOf(filtrarPor) !== -1 || 
@@ -42,23 +43,23 @@ filtrarEventos(filtrarPor: string): any {
     private cdr: ChangeDetectorRef 
   ) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.getEventos();
   }
 
-  alterarImagem(): void {
+  public alterarImagem(): void {
     this.mostrarImagem = !this.mostrarImagem;
   }
 
   public getEventos(): void {
-    this.eventoService.getEvento().subscribe({
-      next: (response) => {
-        this.eventos = response; 
+    this.eventoService.getEvento().subscribe(
+      (eventos: Evento[]) => {
+        this.eventos = eventos;
         this.eventosFiltrados = this.eventos;
         // Força a verificação de mudanças após receber os dados
         this.cdr.detectChanges();
       },
-      error: (error) => console.log(error)
-    });
+      error => console.log(error)
+    );
   }
 }

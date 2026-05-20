@@ -1,9 +1,9 @@
 
 
 export interface RedeSocial {
-    Id: number;
-    Nome: string;
-    URL: string;
-    EventoId: number ;
-    PalestranteId: number;
+    id: number;
+    nome: string;
+    uRL: string;
+    eventoId: number ;
+    palestranteId: number;
 }
