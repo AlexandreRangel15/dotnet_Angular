@@ -1,15 +1,16 @@
+// src/app/nav/nav.ts
 import { Component } from '@angular/core';
-
+import { CollapseModule } from 'ngx-bootstrap/collapse'; // Certifique-se de importar aqui!
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @Component({
-  selector: 'app-nav',
+  selector: 'app-nav', // ou o seletor correspondente
+  standalone: true,
+  imports: [CollapseModule, BsDropdownModule], // O Nav precisa importar o CollapseModule e BsDropdownModule para usar no HTML dele
   templateUrl: './nav.html',
-  // Se o arquivo .css não existe, deixe o array vazio:
-  styleUrls: [] 
+  styleUrl: './nav.scss'
 })
 export class Nav {
-  // Adicione esta linha:
-  isCollapsed: boolean = true; 
-
-  constructor() {}
+  // Crie a variável de controle aqui dentro!
+  isCollapsed = false; 
 }

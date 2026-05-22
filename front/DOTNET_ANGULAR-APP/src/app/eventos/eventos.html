@@ -50,11 +50,11 @@
         >}
       </td>
       <td>
-        <button class="btn btn-primary btn-sm me-2">
+        <button class="btn btn-primary btn-sm me-2" tooltip="Editar evento">
         <i class="fa fa-edit"></i>  
           
         </button>
-        <button class="btn btn-danger btn-sm">
+        <button class="btn btn-danger btn-sm" tooltip="Excluir" (click)="openModal(template, evento.id)">
           <i class="fa fa-trash"></i>
           
         </button>
@@ -71,3 +71,10 @@
   </tr>
 }
 </tfoot>
+
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Tem certeza que deseja excluir o evento?</p>
+    <button class="btn btn-danger" (click)="confirmDelete()">Sim</button>
+    <button class="btn btn-secondary" (click)="declineDelete()">Não</button>
+  </div>

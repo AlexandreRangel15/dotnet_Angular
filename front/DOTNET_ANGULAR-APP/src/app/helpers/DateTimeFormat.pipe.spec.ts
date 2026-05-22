@@ -1,11 +1,18 @@
-/* tslint:disable:no-unused-variable */
-
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { DateTimeFormatPipe } from './DateTimeFormat.pipe';
 
-describe('Pipe: DateTimeFormate', () => {
+describe('DateTimeFormatPipe', () => {
+  let pipe: DateTimeFormatPipe;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [DateTimeFormatPipe]
+    });
+    
+    pipe = TestBed.inject(DateTimeFormatPipe);
+  });
+
   it('create an instance', () => {
-    let pipe = new DateTimeFormatPipe();
     expect(pipe).toBeTruthy();
   });
 });
