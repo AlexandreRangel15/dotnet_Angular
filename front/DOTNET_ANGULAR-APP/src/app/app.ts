@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Palestrantes } from './palestrantes/palestrantes';
 import { EventosComponent } from "./eventos/eventos";
@@ -15,17 +15,32 @@ import { TooltipConfig } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { EventoService } from './services/evento.service';
 import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  // ❌ Remova o HttpClientModule daqui
-  imports: [RouterOutlet, Palestrantes, EventosComponent, Nav, FormsModule, CollapseModule, DateTimeFormatPipe, BsDropdownModule, ModalModule, ToastrModule], // O HttpClientModule deve ser importado apenas uma vez, geralmente no AppModule ou fornecido globalmente por provideHttpClient()
+  imports: [
+    RouterOutlet, 
+    Palestrantes, 
+    EventosComponent, 
+    Nav, 
+    FormsModule, 
+    CollapseModule, 
+    DateTimeFormatPipe, 
+    BsDropdownModule, 
+    ModalModule, 
+    ToastrModule, 
+    NgxSpinnerModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  providers: [EventoService,  TooltipConfig] // Não é necessário fornecer o HttpClient aqui, pois ele já é fornecido globalmente por provideHttpClient()
+  providers: [EventoService, TooltipConfig, BsModalRef]
 })
+
+
 export class App {
   // ✅ Isso vai funcionar automaticamente por causa do provideHttpClient() no app.config.ts
   constructor(private http: HttpClient) {}

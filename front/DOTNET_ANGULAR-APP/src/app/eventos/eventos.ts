@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef, TemplateRef } from '@angular/core'; // Importe o ChangeDetectorRef
+import { Component, OnInit, ChangeDetectorRef, TemplateRef, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
@@ -7,6 +8,12 @@ import { Evento } from '../models/Evento';
 import { DateTimeFormatPipe } from "../helpers/DateTimeFormat.pipe";
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BsModalService } from 'ngx-bootstrap/modal';
+import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+
+
+
+
 
 @Component({
   selector: 'app-eventos',
@@ -14,7 +21,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
   imports: [CommonModule, CollapseModule, FormsModule, DateTimeFormatPipe], // Importe o BsModalRef e BsModalService aqui
   templateUrl: './eventos.html',
   styleUrl: './eventos.scss',
-  providers: [BsModalRef, BsModalService] // Certifique-se de fornecer o EventoService aqui
+
 })
 export class EventosComponent implements OnInit {
   
@@ -49,13 +56,24 @@ export class EventosComponent implements OnInit {
   constructor(
     private eventoService: EventoService,
     private cdr: ChangeDetectorRef,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private toastr: ToastrService,
+    private spinner: NgxSpinnerService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) { }
 
   public ngOnInit(): void {
 
     this.getEventos();
-  }
+
+    if (isPlatformBrowser(this.platformId)) {
+    this.spinner.show();
+
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
+  };
+}
 
   public alterarImagem(): void {
     this.mostrarImagem = !this.mostrarImagem;
@@ -69,7 +87,12 @@ export class EventosComponent implements OnInit {
         // Força a verificação de mudanças após receber os dados
         this.cdr.detectChanges();
       },
-      error => console.log(error)
+      error => {
+        console.log(error);
+        if (isPlatformBrowser(this.platformId)) {
+          this.toastr.error('Erro ao carregar os eventos', 'Erro');
+        }
+      }
     );
   }
 
@@ -81,7 +104,8 @@ export class EventosComponent implements OnInit {
 confirmDelete(): void {
   // Aqui você fará a chamada para o serviço de exclusão futuramente usando o this.eventoId
   console.log(`Deletando o evento com ID: ${this.eventoId}`);
-  
+  this.toastr.success('Evento deletado com sucesso!', 'Sucesso');
+
   this.modalRef?.hide();
 }
 
