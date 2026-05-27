@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http'; // Mantenha apenas o HttpClie
 import { Nav } from './nav/nav';
 
 
+import { ToastrModule } from 'ngx-toastr';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { FormsModule } from '@angular/forms';
@@ -20,7 +21,7 @@ import { DateTimeFormatPipe } from './helpers/DateTimeFormat.pipe';
   selector: 'app-root',
   standalone: true,
   // ❌ Remova o HttpClientModule daqui
-  imports: [RouterOutlet, Palestrantes, EventosComponent, Nav, FormsModule, CollapseModule, DateTimeFormatPipe, BsDropdownModule, ModalModule], // O HttpClientModule deve ser importado apenas uma vez, geralmente no AppModule ou fornecido globalmente por provideHttpClient()
+  imports: [RouterOutlet, Palestrantes, EventosComponent, Nav, FormsModule, CollapseModule, DateTimeFormatPipe, BsDropdownModule, ModalModule, ToastrModule], // O HttpClientModule deve ser importado apenas uma vez, geralmente no AppModule ou fornecido globalmente por provideHttpClient()
   templateUrl: './app.html',
   styleUrl: './app.scss',
   providers: [EventoService,  TooltipConfig] // Não é necessário fornecer o HttpClient aqui, pois ele já é fornecido globalmente por provideHttpClient()
