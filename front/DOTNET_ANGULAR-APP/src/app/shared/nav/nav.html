@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">DOTNET_ANGULAR-APP</a>
+    <a class="navbar-brand" routerLink="/dashboard">DOTNET_ANGULAR-APP</a>
     
     <button 
       class="navbar-toggler" 
@@ -15,12 +15,15 @@
     <div class="collapse navbar-collapse" id="navbarNav" [collapse]="isCollapsed" [isAnimated]="true">
       
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Eventos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Palestrantes</a>
-        </li>
+       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+  <a class="nav-link" routerLink="/eventos">Eventos</a>
+</li>
+<li class="nav-item" routerLinkActive="active">
+  <a class="nav-link" routerLink="/palestrantes">Palestrantes</a>
+</li>
+<li class="nav-item" routerLinkActive="active">
+  <a class="nav-link" routerLink="/contatos">Contatos</a>
+</li>
       </ul>
 
       <ul class="navbar-nav">
@@ -30,11 +33,11 @@
             Vinícius
           </a>
           <div *dropdownMenu class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" routerLink="/perfil">
               Perfil
             </a>
             <div role="separator" class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" routerLink="/login">
               Sair
             </a>
           </div>

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from "../../../../node_modules/@angular/router/types/_router_module-chunk";
+import { RouterModule } from '@angular/router';
+import { TituloComponent } from "../../shared/titulo/titulo.component";
 
 @Component({
   selector: 'app-palestrantes',
-  imports: [],
+  imports: [TituloComponent, RouterModule],
   templateUrl: './palestrantes.html',
   styleUrl: './palestrantes.scss',
 })

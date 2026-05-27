@@ -10,6 +10,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { ContatosComponent } from "../contatos/contatos.component";
+import { TituloComponent } from "../../shared/titulo/titulo.component";
 
 
 
@@ -18,7 +20,7 @@ import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-eventos',
   standalone: true, // Se estiver usando Angular 17+
-  imports: [CommonModule, CollapseModule, FormsModule, DateTimeFormatPipe], // Importe o BsModalRef e BsModalService aqui
+  imports: [CommonModule, CollapseModule, FormsModule, DateTimeFormatPipe, ContatosComponent, TituloComponent], // Importe o BsModalRef e BsModalService aqui
   templateUrl: './eventos.html',
   styleUrl: './eventos.scss',
 
