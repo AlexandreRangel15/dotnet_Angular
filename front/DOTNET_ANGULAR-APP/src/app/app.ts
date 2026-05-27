@@ -1,7 +1,10 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Palestrantes } from './palestrantes/palestrantes';
-import { EventosComponent } from "./eventos/eventos";
+import { Palestrantes } from './components/palestrantes/palestrantes';
+import { EventosComponent } from "./components/eventos/eventos";
+import { ContatosComponent } from './components/contatos/contatos.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClient } from '@angular/common/http'; // Mantenha apenas o HttpClient
 import { Nav } from './nav/nav';
 
@@ -25,6 +28,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     RouterOutlet, 
     Palestrantes, 
     EventosComponent, 
+    ContatosComponent,
+    PerfilComponent,
+    DashboardComponent,
     Nav, 
     FormsModule, 
     CollapseModule, 
